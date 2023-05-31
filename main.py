@@ -4,14 +4,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import pandas_ta as pta
 import gc
+from stock_list import stocks
 
 plt.style.use('fivethirtyeight')
 plt.rcParams['figure.figsize'] = (20,10)
 
 # DOWNLOAD DADOS PARA CRIAR O DATAFRAME
 index = 0
-while index < len(list):
-    element = list[index]
+while index < len(stocks):
+    element = stocks[index]
 
     preco = yf.download(tickers = element, period = '6mo', interval = '1d')
 
